@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+<link rel="stylesheet" href="css/stylesheet.css">
+   <script src="https://d3js.org/d3.v3.min.js"></script>
+<!--    <script src="https://d3js.org/d3.v4.min.js"></script>-->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js'></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="javascript/tooltips.js" type="text/javascript" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>  
+
+   
+    <div class="container">
+        <div class="row shadowbox" style="background-color: #000; padding: 5px;">
+        <div class="col-lg-4"><img src="giphy.gif" width="300" height="180"/></div>
+        <div class="col-lg-8" style="color: #fff">
+            <h1>COVID-19 pandemic in Italy</h1>
+            <div class="row">
+            <div class="col-lg-4" style="margin-top: 20px;">
+                <h5>Total cases</h5>
+                <h2 style="">238,499</h2>
+                </div>
+                <div class="col-lg-4"  style="margin-top: 20px;">
+                     <h5>Total deaths</h5>
+                    <h2 style="color: red">34,634</h2>
+                </div>
+                <div class="col-lg-4"  style="margin-top: 20px;">
+                    <h5 style="">Total recovered</h5>
+                    <h2 style="color: green">182,893</h2>
+                </div>
+            </div>
+            
+            
+            </div>
+            </div>
+        <div class="row">
+            <P style="padding: 20px; text-align: justify;">The COVID-19 is a type of virus that affect the human’s respiratory tracts. There symptoms can be many illnesses like fever, cold and pneumonia to Severe Acute Respiratory Syndrome (SARS). The spread of this virus, as the new name coronavirus, first found in the city of Wuhan, china at the end of Dec’19. On 11 Mar’19, the WHO officially announced the COVID-19 as a pandemic, because this virus affected more than a hundred countries, causing over thousands of deaths. 
+In Italy, they found first two case of COVID-19 at the end of Jan’20. Then, after 22 February, COVID-19 cases started spreading very fast all over the Italian population. Till 7 JUN’20, Italy has 235 thousand cases of coronavirus, which is the most affected countries worldwide. At present, Lombardy, Emilia-Romagna, and Donut piedmont are the region which has the highest number COVID-19 cases, placed in the north side of the country. Demographic data show that people who is infected by this virus are mostly people who’s aged 50 years and more. Italy also pulling things down as they recovered 166 thousand from virus or discharged from hospitals as of now 7 Jun’20. 
+</P>
+            <iframe width="1500" height="600" src="map.html"></iframe>
+        </div>
+       
+        <div class="row ">
+            <h3>Coronavirus (COVID-19) active case, recoveries, deaths Italy as of June 10, 2020</h3>
+            <div class="col-lg-3">
+            <p style="text-align: justify; padding: 50px 0px 30px; font-size: 16px; ">As of June 10, 2020, the total number of Coronavirus (COVID-19) cases in Italy reached approximately 236 thousand, 32 thousand of which were active cases. Moreover, the number of people who recovered or were discharged from hospital after contracting the virus reached 170 thousand, while the number of deceased reached 34 thousand. As of March 19, 2020, the number of coronavirus deaths in Italy exceeded that registered in China. 
+            For a global overview visit Statista's webpage exclusively dedicated to coronavirus, its development, and its impact.</p>
+            </div>
+            <div class="col-lg-9" style="padding-top: 30px;">
+            <div id="drop" align=center></div>
+            <div id="bar_graph" class="shadowbox"></div>
+            </div>
+        </div>
+        <div class="row" style="padding: 30px;">
+            <h3 style="padding-bottom:20px;">Distribution of Coronavirus cases in Italy as of June 3, 2020, by age group</h3>
+            <div class="col-lg-4 shadowbox" id="genderchart"></div>
+            <div class="col-lg-8"><p style="text-align: justify;  padding: 40px; font-size: 16px;"> The spread of the Coronavirus (COVID-19) in Italy has hit mostly people over 50 years of age. In fact, as the chart shows, 70 percent of individuals infected with the virus was over 50 years old. Only one in four individuals who contracted the virus were between 19 and 50 years old. 
+Since the first case was detected at the end of January in Italy, Coronavirus has been spreading fast. As of June 15, 2020, the authorities reported 237 thousand cases in the country. The area mostly hit by the virus was the North, in particular the region of Lombardy. </p></div>
+           
+        </div>
+        <div class="row " style="padding: 30px;">
+        <h3 style="padding-bottom:20px;">Distribution of Coronavirus cases in Italy as of June 15, 2020, by gender</h3>
+            <div class="col-lg-8"><p style="padding: 20px;  text-align: justify;" >The spread of the Coronavirus (COVID-19) in Italy has hit females slightly more than men. In fact, as the chart shows, 54 percent of individuals infected with the virus was female and 46 percent male. 
+Since the first case was detected at the end of January in Italy, Coronavirus has been spreading fast. As of June 15, 2020, the authorities reported 237 thousand cases in the country. The area mostly hit by the virus was the North, in particular the region of Lombardy. </p></div>
+         <div class="col-lg-4 shadowbox" style="padding: 20px;" id="agechart"></div>
+        </div>
+        <div class="row" style="padding: 20px;">
+            <h3>Coronavirus (COVID-19) death rate in Italy as of May 2020, by gender and age group</h3>
+        <div class="col-lg-4" id="agechart"><p style="padding: 20px; text-align:  justify;"> After the outbreak of the coronavirus (COVID-19) in Italy, many people died after contracting the infection. An in depth study on 32 thousand coronavirus deaths revealed that the fatality rate is much higher for men. In fact, if the mortality rate for female patients was 10.4 percent, the figure for male patients was 17.7 percent. The chart shows how this gap was recorded among all age groups. 
+The virus originated in Wuhan, a Chinese city populated by millions and located in the province of Hubei.</p></div>
+        <div class="col-lg-8 shadowbox" id="deathrate"></div>
+        </div>
+        <div class="row" style="padding: 20px;">
+            <h3 style="padding-bottom: 20px;">Most common symptoms observed at hospital admission of coronavirus (COVID-19) patients who deceased in Italy as of May 2020</h3>
+            <div class="col-lg-6" style="padding: 20px; text-align: justify"><p style="padding: 20px; justify-content: center">An in depth study on patients admitted to hospital and later deceased from the coronavirus (COVID-19) infection in Italy revealed that three out of four individuals showed symptoms such as fever and dyspnea at the moment of admission to the hospital. Additionally, cough was found in 39 percent of individuals hospitalized with coronavirus.</p></div>
+        <div id="causes" class="col-lg-6 shadowbox"></div>
+            
+        </div>
+        <div class="row" style="padding: 20px; justify-content: center">
+            <h3 style="padding-bottom: 20px;">Number of active coronavirus cases in Italy as of June 15, 2020, by status</h3>
+        <div class="col-lg-6 shadowbox" id="heathcauses"></div>
+            <div class="col-lg-6"><p style="padding: 20px; text-align: justify">As of June 15, 2020, the number of active coronavirus (COVID-19) infections in Italy reached 26 thousand. Also, 207 infected individuals were being treated in intensive care units. Another 3.5 thousand individuals infected with the coronavirus were hospitalized with symptoms, while more than 22 thousand were in isolation at home.</p></div>
+        </div>
+        
+        <div class="row">
+            <h3 style="padding-bottom: 20px;">Opinions on Italian government's response to coronavirus 2020</h3>
+              <div class="col-lg-5" ><p style="padding: 20px; text-align: justify">In a survey from April 2020, most Italian interviewees (71 percent) approved the government's response to the coronavirus (COVID-19) pandemic. 
+Indeed, Italian Prime Minister Giuseppe Conte reached the largest share of supporters in April 2020 since the beginning of the first cabinet.</p></div>
+        
+        <div class="col-lg-7 shadowbox" id="opinion"></div>
+        
+        </div>
+       
+     </div>
+   
+ <script src="javascript/opinion.js" type="text/javascript">  
+    </script>
+<script src = "javascript/bargraph_cases.js" type="text/javascript"></script>
+    <script src = "javascript/pi_age.js" type="text/javascript"></script>
+    <script src="javascript/gender_pi.js" type="text/javascript"></script> 
+     <script src="javascript/deathRate.js" type="text/javascript" ></script>
+     
+    <script>
+    var inputData1 = [{label:"0-18 years",value:5225},{label:"19-50 years",value:67925},{label:"51-70 years",value:73625},{label:"<70 years",value:91200}];
+
+    var colorScheme1 = ["rgb(40,118,221)","rgb(15, 40, 62)","rgb(186, 186, 186)","rgb(166, 11, 11)"];
+    renderPieChart(inputData1,"#genderchart",colorScheme1);
+</script>
+    
+
+    <script>
+    var inputData = [{label:"Male",value:108775},{label:"Female",value:128725}];
+
+    var colorScheme = ["rgb(40, 118, 221)","rgb(15, 40, 62)"];
+    renderPieChart1(inputData,"#agechart",colorScheme);
+</script>
+<!--    <script src="province_map.js" type="text/javascript"></script>-->
+   <script src="javascript/causescovid.js" type="text/javascript"></script>
+    <script src="javascript/health_status.js" type="text/javascript"></script>
+   
+</body>
+</html>
